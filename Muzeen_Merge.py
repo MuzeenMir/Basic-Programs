@@ -31,24 +31,22 @@ def mergeSort(l, s):
     while len(listx) > 1:
             final_list = []        
             for i in range(0, len(listx)-1, 2):
-
                 final_list.append(listx[i] + listx[i+1])
                 final_list[-1].sort()
                 global z
                 z +=1
-            if len(final_list) == 1 and l == 0:
+            if len(listx) % 2 != 0:
                 final_list.append(listx[-1])
                 final_list.sort()
-                l +=1
             listx = final_list
-  #  print(listx)
+    print(listx)
 
 z = 0
 list = []
 for i in range(a):
     x = random.randint(b,c)
     list.append(x)
-#print('unsorted list: ', list)
+print('unsorted list: ', list)
 o = len(list)
 
 if b < c:
