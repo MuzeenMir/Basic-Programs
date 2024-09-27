@@ -12,7 +12,7 @@ for m in range(ns):
     list.append(n)
 a = len(list)
 print(a)
-#print('unsortted: ', list)
+print('unsortted: ', list)
 temp = 0
 newlist = []
 while newlist != list:
@@ -21,12 +21,10 @@ while newlist != list:
     newlist = list[:]
     while i < a-1:
         if list[i]>list[j]:
-            temp = list[i]
-            list[i]= list[j]
-            list[j] = temp
+            list[i], list[j] = list[j], list[i]
         i = i+1
         j = j+1
 end = timer()
 print(end - start)
-#print('sorted: ', list)
+print('sorted: ', list)
 print('number of elements produced: ', a)
